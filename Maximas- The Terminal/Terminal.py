@@ -62,6 +62,9 @@ def HelpUtil():
     print("setup: Sets up accounts. \n")
     print("acc: Modifies account info. Uses:")
     print("| _i: See acc info. \n")
+    print("load: Loads. Inputs: time,display \n")
+    print("echo: Echoes input. Input: text \n")
+    print("date: Shows date and time. \n")
     
 def VersUtil(input):
     vertype1 = platform.machine()
@@ -151,7 +154,26 @@ def mainloop():
                     print(text_to_print)
                 else:
                     print(" E-1011 No input given. ")
-                    
+        elif INPUT_INDEX.startswith("echo"):
+            print(INPUT_INDEX[5:])
+        elif INPUT_INDEX.startswith("date"):
+            print(datetime.date(),datetime.time())
+        elif INPUT_INDEX.startswith("load"):
+            
+            parts = INPUT_INDEX.split()
+            secs = int(parts[1])
+            style = parts[-1]
+            start_time = time.time()
+            end_time = 0
+            
+            while (end_time - start_time) < secs:
+                os.system("cls" if os.name == "nt" else "clear")
+                progress = int(((time.time() - start_time) / secs) * 100)
+                print("[" + (style * round((end_time - start_time))) + "]- " + str(round(abs(secs - (end_time - start_time)))) + " seconds left...", end="\r")
+
+                end_time = time.time()
+                
+            os.system("cls")            
         elif INPUT_INDEX.startswith('%'):    
             if len(PARTS) == 3 and PARTS[1].isalnum() and PARTS[2].isdigit():
                 key = PARTS[1]
