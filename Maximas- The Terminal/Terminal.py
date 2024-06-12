@@ -46,22 +46,22 @@ def HelpUtil():
     print("| _w: Gives Windows data.")
     print("| _p: Gives Python data.")
     print("| _s: Gives system data.")
-    print("| _a: Gives all data.")
-    print("color: CHanges terminal color. Inputs: foreground, background (colors 0-f)")
-    print("%: Stores variables. Inputs: key, value (string, float)")
-    print("$: Retrieves variables. Input: key (string)")
-    print("cls: Clears screen")
-    print("title: Changes session title. Input: newTitle (string)")
+    print("| _a: Gives all data. \n")
+    print("color: CHanges terminal color. Inputs: foreground, background (colors 0-f) \n")
+    print("%: Stores variables. Inputs: key, value (string, float) \n")
+    print("$: Retrieves variables. Input: key (string) \n")
+    print("cls: Clears screen. \n")
+    print("title: Changes session title. Input: newTitle (string) \n")
     print("sys: Changes system data and/or retrieves console data. Uses:")
     print("| _q: Quits Maximas.")
     print("| _r: Shows Maximas runtime.")
-    print("| _w: Enables PsuedoCMD - where you can type cmd commands.")
-    print("lock: Locks Maximas. Input: unlockKey (string)")
+    print("| _w: Enables PsuedoCMD - where you can type cmd commands. \n")
+    print("lock: Locks Maximas. Input: unlockKey (string) \n")
     print("trig: Performs various trigonometry processes. All processes are precursored by _. Inputs: process, number Uses: ")
-    print("| (there are too many) To view uses, type 'trig _h'.")
-    print("setup: Sets up accounts.")
+    print("| (there are too many) To view uses, type 'trig _h'. \n")
+    print("setup: Sets up accounts. \n")
     print("acc: Modifies account info. Uses:")
-    print("| _i: See acc info.")
+    print("| _i: See acc info. \n")
     
 def VersUtil(input):
     vertype1 = platform.machine()
@@ -77,7 +77,12 @@ def VersUtil(input):
     if input == '_w':
         print(f"Windows Info > Node: {vertype7}, System: {vertype8}, Win32 Version: {vertype9}, Release: {vertype10}")
     elif input == '_p':
-        print(f"Windows Info > Version: {vertype3}, Compiler: {vertype4}, Implementation: {vertype5}, Arch: {vertype2}")
+        print(f"Python Info > Version: {vertype3}, Compiler: {vertype4}, Implementation: {vertype5}, Arch: {vertype2}")
+    elif input == '_s':
+        print(f"Machine: {vertype1}, Processor: {vertype6}")
+    elif input == '_a':
+        print(f"Windows Info > Node: {vertype7}, System: {vertype8}, Win32 Version: {vertype9}, Release: {vertype10} Python Info > Version: {vertype3}, Compiler: {vertype4}, Implementation: {vertype5}, Arch: {vertype2} System Info > Machine: {vertype1}, Processor: {vertype6}")
+
 # ERRORS REFERENCE #
 
 # 0000 The type (1: SE, 2: PE, 3: OE) (syntax, process, other)
