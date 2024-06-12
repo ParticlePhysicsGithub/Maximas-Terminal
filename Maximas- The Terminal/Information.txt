@@ -1,9 +1,9 @@
 Maximas Terminal
 Part of Project Maximas
 
-Version: 0.0.0 --norm --beta
+Version: 0.0.1 --norm --valid -;
 
-This is the first version of Maximas!
+This is the second version of Maximas!
 
 
 Flags (info):
