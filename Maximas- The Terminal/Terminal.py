@@ -97,7 +97,7 @@ def VersUtil(input):
 #
 # PROCESS ERRORS > (it or you messed up)
 # 2011: $: "" does not exist.
-#
+# 2024: Commands: "" is not a valid command.
 #
 #
 
@@ -301,4 +301,6 @@ def mainloop():
         else:
             if INPUT_INDEX in FUNCTIONS:
                 FUNCTIONS[INPUT_INDEX]()
+            else:
+                print("E-2024. That command is not valid.")
 mainloop()
