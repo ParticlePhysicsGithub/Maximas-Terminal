@@ -1,0 +1,33 @@
+Maximas Terminal
+Part of Project Maximas
+
+Version: 0.0.0 --norm --beta
+
+This is the first version of Maximas!
+
+
+Flags (info):
+
+0.0.0 (version)
+
+--norm (normal, nothing special)
+
+--extra (a few more features than the previous, so the next version after 1.2.5 --norm might be 1.2.5b --extra)
+
+--beta (beta, maybe bugs)
+
+--valid (no unintentionally-triggered bugs, yet user error may cause crashes)
+
+--secure (no errors (unless high-number errors and math domain errors))
+
+-; (Has windows compatibility)
+
+-/ (Same, but Linux)
+
+-= (Mac)
+
+-> (Should work on most systems)
+
+-<> (Not tested or known) (subflag: <>)
+
+So, 1.2.2c --extra --beta -; -= means: Version 1.2.2c, 125th release, more features, beta, works on windows and mac
